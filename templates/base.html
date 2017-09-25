@@ -1,0 +1,40 @@
+<!doctype html>
+{% from 'cars.html' import display_cars %}
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="./static/style.css">
+  <title>Hello from Flask</title>
+</head>
+
+<body>
+
+  <div>
+    {% if cars %}
+      {% if cars["topMatch"] %}
+      <h1>Best Match:</h1>
+        <ul>
+          {% for car in cars["topMatch"] %}
+            {{ display_cars(car) }}
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <h1>Cheapest cars:</h1>
+      <ul>
+        {% for car in cars["cheapest"] %}
+            {{ display_cars(car) }}
+        {% endfor %}
+      </ul>
+      <h1>Newest cars:</h1>
+      <ul>
+        {% for car in cars["newest"] %}
+            {{ display_cars(car) }}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <h2>This did not work</h2>
+    {% endif %}
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+{% macro display_cars(car) -%}
+  <ul>
+    <li>Car: <span class="uppercase">{{ car.name }}</span></li>
+    <li>Price: <span class="pound">{{ car.price }}</span></li>
+    <li>Year: {{ car.year }}</li>
+    <li><a href="{{ car.url }}" target="_blank">Link</a></li>
+  </ul>
+{%- endmacro %}
