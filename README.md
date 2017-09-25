@@ -18,7 +18,7 @@ To activate the environment run:
 
 To run the Flask server from the terminal, set the FLASK_APP environment variable:
 
-`$ export FLASK_APP=hello.py`
+`$ export FLASK_APP=server.py`
 
 And to run the server:
 
