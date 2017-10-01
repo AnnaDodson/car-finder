@@ -26,4 +26,10 @@ And to run the server:
 
 This runs local host on port 5000.
 
+To run with [Gunicorn](http://gunicorn.org/#quickstart), for the web server, run:
+
+`gunicorn -b 127.0.0.1:4000 server:app`
+
+To add worker processes, add `-w 4` flag for 4 processors.
+
 For further information, see the [Flask docs](http://flask.pocoo.org/docs/0.12/quickstart/#quickstart) and the Python docs for [Virtual environments](https://pypi.python.org/pypi/virtualenv).
