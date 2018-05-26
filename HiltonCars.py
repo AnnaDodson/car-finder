@@ -1,3 +1,4 @@
+# encoding=utf8  
 from lxml import html
 from Car import Car 
 import requests
